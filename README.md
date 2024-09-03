@@ -1,4 +1,4 @@
-# RedisDemo
+# Spring Boot整合Redis的操作示例
 ### 简介
 一个基于Spring Boot的Redis操作示例，包含基本的增删改查功能。
 ### 功能
