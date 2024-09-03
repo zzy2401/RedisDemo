@@ -73,6 +73,7 @@ public class TestController {
         listOps.leftPush("list","3");
         listOps.leftPush("list","4");
         listOps.leftPush("list","5");
+
         System.out.println(listOps.range("list", 0, -1));
         // Outputs: [5, 4, 3, 2, 1]
     }
@@ -82,11 +83,14 @@ public class TestController {
         ops.add("set","1");
         ops.add("set","1");
         ops.add("set","1");
+
         ops.add("set","2");
         ops.add("set","2");
+
         ops.add("set","3");
         ops.add("set","4");
         ops.add("set","5");
+
         System.out.println(ops.members("set"));
         // Outputs: [1, 2, 3, 4, 5]
     }
@@ -96,12 +100,15 @@ public class TestController {
         ops.add("zset","1",1);
         ops.add("zset","3",3);
         ops.add("zset","2",2);
+
         ops.add("zset","4",4);
         ops.add("zset","5",5);
+
         ops.add("zset","6",6);
         ops.add("zset","8",6);
         ops.add("zset","7",6);
         ops.add("zset","9",6);
+
         System.out.println(ops.range("zset",0,-1));
         // Outputs: [1, 2, 3, 4, 5, 6, 7, 8, 9] with scores
     }
@@ -111,8 +118,10 @@ public class TestController {
         ops.put("hashmap", "key1", "value1");
         ops.put("hashmap", "key2", "value2");
         ops.put("hashmap", "key3", "value3");
+
         System.out.println(ops.entries("hashmap"));
         // Outputs: {key1=value1, key2=value2, key3=value3}
+
         System.out.println("Value of 'key1': " + ops.get("hashmap", "key1"));
         // Outputs: Value of 'key1': value1
         System.out.println("Value of 'key2': " + ops.get("hashmap", "key2"));
